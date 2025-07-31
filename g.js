@@ -53,10 +53,11 @@ async function claimFaucet(address) {
       await new Promise(resolve => setTimeout(resolve, 5000));
     } catch {
       console.error(`❌ Failed for ${address}: Not valid JSON\nResponse:\n${text}`);
+      await new Promise(resolve => setTimeout(resolve, 60000));
     }
   } catch (error) {
     console.error(`❌ Failed for ${address}: ${error.message}`);
-    await new Promise(resolve => setTimeout(resolve, 30000));
+    await new Promise(resolve => setTimeout(resolve, 60000));
   }
 }
 
