@@ -9,7 +9,8 @@ const addresses = ["0xBfe29717877cB8a28F43224BEE5eF321a2933Ccc","0xdE2841D8D3eE2
 
 // Main function to process each addresssync function claimFaucet(address) {
   const url = `${endpoint}?token=${token}${proxyString}${optionsString}`;
-
+async function claimFaucet(address) {
+  const url = `${endpoint}?token=${token}${proxyString}${optionsString}`;
   const body = {
     query: `
       mutation ClaimFaucet {
