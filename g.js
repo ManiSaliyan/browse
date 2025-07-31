@@ -1,4 +1,4 @@
-const fetch = require("node-fetch"); // Only needed in Node.js environments
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args)); // For Node.js30000 // Only needed in Node.js environments
 
 const endpoint = "https://production-sfo.browserless.io/chrome/bql";
 const token = "2SmMY2zCq0NyNvx935a5ce89baf853bf72ee9cd7eb17c65c7";
